@@ -7,7 +7,6 @@ app.use(express.json());
 app.use(router);
 
 app.get("/github", (request, response) => {
-  console.log(process.env.GITHUB_CLIENT_ID);
   response.redirect(`https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}`);
 });
 
